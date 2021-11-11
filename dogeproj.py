@@ -2,10 +2,12 @@ from flask import Flask, render_template, request
 from difflib import get_close_matches
 from random import randint
 import csv
+import requests
 
 app = Flask(__name__)
 akc_breeds = []  # list of akc breeds
 akc_breed_names = []  # list of names of breeds
+wiki_url = "https://wiki-text-scraper-361.herokuapp.com/requestText"
 
 
 class Breed:
@@ -44,7 +46,12 @@ def search():
     user_search = request.form.get('search-breed')
     for breed in akc_breeds:
         if breed.name.upper() == user_search.upper():
-            return render_template('doge-result.html', dog=breed)
+            param = {'wikipage':user_search}
+            r = requests.get(url = wiki_url, params = param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+            return render_template('doge-result.html', dog=breed, text=text, img=img)
     close_breeds = get_close_matches(user_search, akc_breed_names)
     if len(close_breeds) == 1:
         return render_template('doge-search-similar.html', search=user_search, similar1=close_breeds[0])
@@ -63,7 +70,12 @@ def similar():
     selected_breed = request.form['similar-breed-btn']
     for breed in akc_breeds:
         if breed.name == selected_breed:
-            return render_template('doge-result.html', dog=breed)
+            param = {'wikipage': selected_breed}
+            r = requests.get(url=wiki_url, params=param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+            return render_template('doge-result.html', dog=breed, text=text, img=img)
 
 
 @app.route('/random', methods=['POST'])
@@ -72,7 +84,12 @@ def random():
     breed_name = akc_breed_names[index]
     for breed in akc_breeds:
         if breed.name == breed_name:
-            return render_template('doge-result.html', dog=breed)
+            param = {'wikipage': breed_name}
+            r = requests.get(url=wiki_url, params=param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+            return render_template('doge-result.html', dog=breed, text=text, img=img)
 
 
 if __name__ == "__main__":
