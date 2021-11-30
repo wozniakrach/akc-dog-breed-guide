@@ -60,7 +60,7 @@ body {
     width: 100%;
 }
 
-#doge-img {
+.doge-img {
     object-fit: cover;
     width: 175px;
     height: 175px;
@@ -172,6 +172,9 @@ body {
     cursor:pointer;
 }
 
+.spacer {
+    height: 80px;
+}
 
 /* GALLERY */
 
