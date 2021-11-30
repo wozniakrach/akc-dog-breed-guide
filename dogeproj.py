@@ -44,6 +44,7 @@ def home():
 @app.route('/search', methods=['POST'])
 def search():
     user_search = request.form.get('search-breed')
+<<<<<<< HEAD
 
     for breed in akc_breeds:
         if breed.name.upper() == user_search.upper():
@@ -53,6 +54,15 @@ def search():
             text = data['wikitext']
 
             img = "/static/imgs/akc/" + breed.name + ".png"
+=======
+    for breed in akc_breeds:
+        if breed.name.upper() == user_search.upper():
+            param = {'wikipage':user_search}
+            r = requests.get(url = wiki_url, params = param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
             return render_template('doge-result.html', dog=breed, text=text, img=img)
     close_breeds = get_close_matches(user_search, akc_breed_names)
     if len(close_breeds) == 1:
@@ -72,11 +82,19 @@ def similar():
     selected_breed = request.form['similar-breed-btn']
     for breed in akc_breeds:
         if breed.name == selected_breed:
+<<<<<<< HEAD
             param = {'wikipage': selected_breed, 'sentences': 3}
             r = requests.get(url=wiki_url, params=param)
             data = r.json()
             text = data['wikitext']
             img = "/static/imgs/akc/" + breed.name + ".png"
+=======
+            param = {'wikipage': selected_breed}
+            r = requests.get(url=wiki_url, params=param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
             return render_template('doge-result.html', dog=breed, text=text, img=img)
 
 
@@ -86,11 +104,19 @@ def random():
     breed_name = akc_breed_names[index]
     for breed in akc_breeds:
         if breed.name == breed_name:
+<<<<<<< HEAD
             param = {'wikipage': breed_name, 'sentences': 3}
             r = requests.get(url=wiki_url, params=param)
             data = r.json()
             text = data['wikitext']
             img = "/static/imgs/akc/" + breed.name + ".png"
+=======
+            param = {'wikipage': breed_name}
+            r = requests.get(url=wiki_url, params=param)
+            data = r.json()
+            text = data['wikitext']
+            img = "/static/"+ breed.name +".png"
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
             return render_template('doge-result.html', dog=breed, text=text, img=img)
 
 

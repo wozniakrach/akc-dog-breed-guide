@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Zen+Kaku+Gothic+Antique&display=swap');
 
+<<<<<<< HEAD
 /* GLOBAL */
 body {
     margin: 0 auto;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     text-align: center;
     max-width: 876px;
+=======
+body {
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    text-align: center;
+    max-width: 960px;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 }
 
 .page-title {
     font-family: 'Nanum Pen Script', serif;
+<<<<<<< HEAD
     font-size: 50px;
     margin-bottom: 0px;
     margin-top: 80px;
@@ -56,10 +67,18 @@ body {
     margin-bottom: 18px;
 }
 
+=======
+    font-size: 6vw;
+    margin-bottom: 15px;
+}
+
+/* home page */
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 .doge-img-container {
     width: 100%;
 }
 
+<<<<<<< HEAD
 #doge-img {
     object-fit: cover;
     width: 175px;
@@ -70,6 +89,13 @@ body {
 .info {
     margin: 10px;
 }
+=======
+.doge-img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 .info-icon {
     position:relative;
 }
@@ -85,9 +111,15 @@ body {
     width: 175px;
     top: 100%;
     left: -150%;
+<<<<<<< HEAD
     margin-left: -80px;
 
     padding: 5px 6px;
+=======
+    margin-left: -120px;
+
+    padding: 5px 5px;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
     border-radius: 7px;
     background-color: black;
     color: white;
@@ -117,11 +149,19 @@ body {
 
 }
 
+<<<<<<< HEAD
 /* MAIN SEARCH */
 .search {
     margin-top: 20px;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: min(20px, 2vw);
+=======
+/* main search */
+.search {
+    margin-top: 30px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 2vw;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 }
 
 #search-breed {
@@ -144,8 +184,14 @@ body {
 
 .search-btn {
     color: white;
+<<<<<<< HEAD
     font-weight: 800;
     font-size: min(40px, 3vw);
+=======
+    /* #e3b97b; */
+    font-weight: 800;
+    font-size: 3vw;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
     font-family: 'Nanum Pen Script', serif;
 }
 
@@ -160,7 +206,11 @@ body {
     background: linear-gradient(to right, #E68787 0%, #E3BE7B 20%, #8CE1B8 40%, #96D1EB 60%, #9194E3 80%, #DF9BE4 100%);
     border-color: linear-gradient(to right, #E68787 0%, #E3BE7B 20%, #8CE1B8 40%, #96D1EB 60%, #9194E3 80%, #DF9BE4 100%);
     color: black;
+<<<<<<< HEAD
     font-size: min(5vw, 50px);
+=======
+    font-size: 5vw;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
     font-weight: 600;
     font-family: 'Nanum Pen Script', serif;
     border-color: antiquewhite;
@@ -171,7 +221,11 @@ body {
     cursor:pointer;
 }
 
+<<<<<<< HEAD
 /* GALLERY */
+=======
+/* movie dog imgs */
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 .doge-imgs {
     margin: auto;
     margin-top: 80px;
@@ -190,11 +244,21 @@ body {
     border: none;
     color: transparent;
     background-size: 105% !important;
+<<<<<<< HEAD
     cursor: pointer;
 
 }
 
 /* SEARCH RESULT */
+=======
+
+}
+
+
+
+
+/* search result */
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 .info-container {
     width: 100%;
     padding: 20px;
@@ -205,7 +269,11 @@ body {
 }
 
 .breed-img-container {
+<<<<<<< HEAD
     width: 35%;
+=======
+    width: 30%;
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 }
 
 .breed-img {
@@ -234,16 +302,22 @@ body {
     font-weight: 600;
 }
 
+<<<<<<< HEAD
 .breed-wiki-text {
     max-width: 690;
 }
 
+=======
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 .search-bar {
     display: flex;
     gap:20px;
     justify-content: center;
     align-items: flex-end;
+<<<<<<< HEAD
     margin-top: 10px;
+=======
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 }
 .similar-breeds-content {
     width: 50%;
@@ -271,6 +345,7 @@ body {
 
 .breed-btn:hover {
     cursor:pointer;
+<<<<<<< HEAD
 }
 
 .search-prompt {
@@ -279,3 +354,6 @@ body {
 
 /*
 
+=======
+}
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78

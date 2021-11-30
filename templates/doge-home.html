@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body %}
+<<<<<<< HEAD
 
 <h1 class="page-title" id="site-title">AKC Dog Breed Explorer</h1>
 <div class="page-text">
@@ -18,6 +19,20 @@
     <img id="doge-img" src="/static/imgs/cosi5.JPG">
 </div>
 
+=======
+<h1 class="page-title">AKC Dog Breed Explorer</h1>
+
+<div class="doge-img-container">
+    <img class="doge-img" src="{{ url_for('static', filename='doge-img.jpg')}}">
+</div>
+<div class="page-text">
+    <h2>Welcome to the AKC (American Kennel Club) Dog Breed Explorer!</h2>
+        <div class="info-icon">
+            <h2 class="icon">&#9432;</h2>
+            <span class="tooltip">To view info about an AKC dog breed, you can:<br>i. search for a breed by name<br>ii. use the button to view a random breed<br>iii. click on one of the dogs at the bottom of the page to view its breed</span>
+        </div>
+</div>
+>>>>>>> 5095ac574e87f03b28fba8b6e4878b28cd403e78
 <div class="search">
     <form action="/search" method="post">
         <label for="search-breed">Enter a breed name: </label>
