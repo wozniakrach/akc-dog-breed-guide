@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="navbar">
+            <a href="/" class="nav">Home</a>
+            <a href="/gallery" class="nav">Gallery</a>
+            <a href="/about" class="nav">About</a>
+        </div>
+        {% block body %}{%endblock %}
+    </body>
+</html>

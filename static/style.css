@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+/* GLOBAL */
+body {
+    margin: 0 auto;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    text-align: center;
+    max-width: 876px;
+}
+
+.page-title {
+    font-family: 'Nanum Pen Script', serif;
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 80px;
+}
+
+/* NAV */
+#navbar {
+    min-width: 100vw;
+    height: 60px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: -5px;
+
+    background-image: url('/static/imgs/banksy.png'), linear-gradient(
+    90deg, rgb(255 255 255) 0%, rgba(255,176,0,1) 100%);
+    background-repeat: round;
+    background-size: contain;
+    background-blend-mode: screen;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.nav {
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Nanum Pen Script';
+    margin-top: 6px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+/* HOME PAGE */
+
+#site-title {
+    padding-top: 10px;
+    margin-bottom: 18px;
+}
+
+.doge-img-container {
+    width: 100%;
+}
+
+#doge-img {
+    object-fit: cover;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+
+.info {
+    margin: 10px;
+}
+.info-icon {
+    position:relative;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 175px;
+    top: 100%;
+    left: -150%;
+    margin-left: -80px;
+
+    padding: 5px 6px;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    margin-left: 111px;
+    border: 5px solid;
+    border-color: transparent transparent black transparent;
+}
+
+.page-text {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: baseline;
+}
+
+
+.info-icon:hover .tooltip {
+    visibility: visible;
+
+}
+
+/* MAIN SEARCH */
+.search {
+    margin-top: 20px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: min(20px, 2vw);
+}
+
+#search-breed {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 2.5vw;
+    margin-top:5px;
+}
+
+.search-text {
+    margin: 6px;
+}
+
+.btn {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    border-radius: 6px;
+    border-width: 2px;
+    background-color: black;
+    transition: .4s;
+}
+
+.search-btn {
+    color: white;
+    font-weight: 800;
+    font-size: min(40px, 3vw);
+    font-family: 'Nanum Pen Script', serif;
+}
+
+.search-btn:hover {
+    background-color: white;
+    border-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.random-btn {
+    background: linear-gradient(to right, #E68787 0%, #E3BE7B 20%, #8CE1B8 40%, #96D1EB 60%, #9194E3 80%, #DF9BE4 100%);
+    border-color: linear-gradient(to right, #E68787 0%, #E3BE7B 20%, #8CE1B8 40%, #96D1EB 60%, #9194E3 80%, #DF9BE4 100%);
+    color: black;
+    font-size: min(5vw, 50px);
+    font-weight: 600;
+    font-family: 'Nanum Pen Script', serif;
+    border-color: antiquewhite;
+}
+
+.random-btn:hover {
+    background: linear-gradient(to left, #E68787 0%, #E3BE7B 20%, #8CE1B8 40%, #96D1EB 60%, #9194E3 80%, #DF9BE4 100%);
+    cursor:pointer;
+}
+
+/* GALLERY */
+.doge-imgs {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+}
+.movie-dogs-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.movie-dog {
+    width: 20%;
+    padding-top: 18%;
+    border: none;
+    color: transparent;
+    background-size: 105% !important;
+    cursor: pointer;
+
+}
+
+/* SEARCH RESULT */
+.info-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.breed-img-container {
+    width: 35%;
+}
+
+.breed-img {
+    border-radius: 6px;
+    width: 90%;
+}
+
+.breed-facts {
+    border: 2px solid gray;
+    border-radius: 6px;
+    padding: 25px;
+    text-align:left;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #F8F4E0;
+}
+
+.fact-labels {
+    font-weight: bold;
+}
+.breed-facts-legend {
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+}
+
+.breed-wiki-text {
+    max-width: 690;
+}
+
+.search-bar {
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+.similar-breeds-content {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px solid gray;
+    border-radius: 6px;
+    padding: 25px;
+    background-color: #F8F4E0;
+}
+
+.similar-legend {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+}
+.breed-btn {
+    background-color: transparent;
+    border-style: none;
+    padding: 0;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 20px;
+}
+
+.breed-btn:hover {
+    cursor:pointer;
+}
+
+.search-prompt {
+    margin-bottom: 0;
+}
+
+/*
+
