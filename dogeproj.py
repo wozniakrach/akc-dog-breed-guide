@@ -50,6 +50,7 @@ def search():
             param = {'wikipage': user_search, 'sentences': 3}
             r = requests.get(url=wiki_url, params=param)
             data = r.json()
+
             text = data['wikitext']
             img = "/static/imgs/akc/" + breed.name + ".png"
             return render_template('doge-result.html', dog=breed, text=text, img=img)
@@ -95,4 +96,4 @@ def random():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
