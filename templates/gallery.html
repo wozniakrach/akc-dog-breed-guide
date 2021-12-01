@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Gallery</title>
+{% endblock %}
+
+{% block body %}
+<div class="gallery-header">
+    <h1 class="page-title">GALLERY</h1>
+</div>
+
+<div class="doge-imgs">
+    <form action="/search" method="post" class="movie-dogs-container">
+        <div class="gallery-row">
+            <input type="submit" name="search-breed" value="American Cocker Spaniel" style="background:url('/static/imgs/gallery/lady.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Akita" style="background:url('/static/imgs/gallery/hachi.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Chihuahua" style="background:url('/static/imgs/gallery/bruiser.png')" class="movie-dog">
+        </div>
+        <div class="gallery-row">
+            <input type="submit" name="search-breed" value="Dalmatian" style="background:url('/static/imgs/gallery/anita-and-pongo.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Golden Retriever" style="background:url('/static/imgs/gallery/airbud.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Pomeranian" style="background:url('/static/imgs/gallery/boo.png')" class="movie-dog">
+        </div>
+        <div class="gallery-row">
+            <input type="submit" name="search-breed" value="Border Collie" style="background:url('/static/imgs/gallery/fly.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Bloodhound" style="background:url('/static/imgs/gallery/goofy.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Beagle" style="background:url('/static/imgs/gallery/gromit.png')" class="movie-dog">
+        </div>
+        <div class="gallery-row">
+            <input type="submit" name="search-breed" value="Collie" style="background:url('/static/imgs/gallery/lassie.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Pembroke Welsh Corgi" style="background:url('/static/imgs/gallery/queen.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Great Dane" style="background:url('/static/imgs/gallery/scooby.png')" class="movie-dog">
+        </div>
+        <div class="gallery-row">
+            <input type="submit" name="search-breed" value="Dachshund" style="background:url('/static/imgs/gallery/slinky.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Beagle" style="background:url('/static/imgs/gallery/snoopy.png')" class="movie-dog">
+            <input type="submit" name="search-breed" value="Cairn Terrier" style="background:url('/static/imgs/gallery/toto.png')" class="movie-dog">
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
