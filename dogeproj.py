@@ -29,7 +29,6 @@ class Breed:
 # parse csv file containing akc breed info
 with open('./static/akc-breeds.csv', 'r') as csv_akc:
     csv_reader = csv.reader(csv_akc)
-    # create a Breed object for each line & add to list of akc breeds
     for row in csv_reader:
         akc_breeds.append(Breed(row[0], row[1].split(';'), row[2], row[3], row[4], row[5], row[6],
                                 row[7], row[8], row[9]))
