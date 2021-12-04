@@ -94,6 +94,14 @@ def random():
             img = "/static/imgs/akc/" + breed.name + ".png"
             return render_template('doge-result.html', dog=breed, text=text, img=img)
 
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 if __name__ == "__main__":
     app.run()

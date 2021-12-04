@@ -178,7 +178,22 @@ body {
 
 /* GALLERY */
 
-/* movie dog imgs */
+.gallery-header {
+    margin: 0 auto;
+    height: 200px;
+    background-image: url('/static/imgs/gallery/poker.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+	background-blend-mode: overlay;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#gallery-title {
+    color: #ffffffc2;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 80px;
+}
 
 .doge-imgs {
     margin: auto;
@@ -188,6 +203,7 @@ body {
 }
 .movie-dogs-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 30px;
 }
@@ -197,9 +213,52 @@ body {
     padding-top: 18%;
     border: none;
     color: transparent;
-    background-size: 105% !important;
     cursor: pointer;
+    border-radius: 2px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
 
+.movie-dog:hover {
+    border-color: black;
+    box-shadow: 0 0 10px black;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ABOUT */
+.about-img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.about-title {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+.about-img-container {
+    margin-top: 20px;
+    width: 80%;
+    text-align:left;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.about-text {
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.about-link {
+    color: #9d6c1d;
 }
 
 /* SEARCH RESULT */

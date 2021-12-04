@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>About</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="spacer"></div>
+<div class="about-img-container">
+    <img class="about-img" src="/static/imgs/cosi2.jpg">
+</div>
+<h1 class="about-title">Info & Sources</h1>
+<p class="about-text">This app explores dog breeds found on the AKC registry. Search images and facts are from the AKC.
+    To learn more, visit <a class="about-link" href="https://www.akc.org/">www.akc.org</a>.</p>
+
+<p class="about-text">Dog breed summaries are provided by Wikipedia via
+    <a class="about-link" href="https://wiki-text-scraper-361.herokuapp.com/">Jared's Wiki Text Scraper</a>.</p>
+
+<p class="about-text">Gallery image sources can be found
+    <a class="about-link" href="/static/imgs/gallery/gallery-img-sources.txt">here</a>.</p>
+
+{% endblock %}
